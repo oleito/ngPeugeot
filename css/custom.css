@@ -1,0 +1,46 @@
+@font-face {
+	font-family: Peugeot;
+	src: url("assets/fonts/peugeot-normal.otf") format("opentype");
+}
+@font-face {
+	font-family: "Peugeot-Regular";
+	src: url("assets/fonts/Peugeot.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.peugeot,
+body {
+	font-family: Peugeot, Helvetica, sans-serif !important;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+a:hover {
+	color: #fff !important;
+}
+
+.bg-peugeot1 {
+	background-color: #007edb;
+}
+.bg-peugeot2 {
+	background-color: #133d5f;
+}
+.bg-peugeot3 {
+	background-color: #162133 !important;
+}
+.redes {
+	background-color: #3C3947;
+}
+
+.btn-peugeot {
+	color: #fff;
+	background-color: #133d5f;
+	border-color: #133d5f;
+}
+
+.btn-peugeot:hover {
+	background: #0c2d47 !important;
+}
