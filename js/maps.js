@@ -6,7 +6,7 @@
           // var icono = "https://imgplaceholder.com/200x320";
           // The map, centered at concesionario
           var map = new google.maps.Map(
-          	document.getElementById('map'), {zoom: 14, center: concesionario});
+          	document.getElementById('map'), {zoom: 15, center: concesionario});
           var contentString = '<div id="content">'+
           '<div id="siteNotice">'+
           '</div>'+
