@@ -16,6 +16,12 @@ body {
   overflow-y: scroll !important;
 }
 
+.telef-wp {
+  color: white;
+}
+.txt-mas {
+  font-size: 1.2rem;
+}
 a,
 a:hover {
   text-decoration: none;
@@ -74,4 +80,17 @@ a:hover {
 }
 .ficha-pdf:hover {
   color: black;
+}
+.btn-ficha {
+  color: #fff;
+  background-color: #007edb !important;
+  border-bottom: 1px solid #0062c5;
+}
+.btn-ficha:hover {
+  color: #fff;
+  background-color: #0062C5 !important;
+}
+
+#home {
+  background-color: #f7f7f7;
 }
