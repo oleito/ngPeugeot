@@ -37,7 +37,7 @@ a:hover {
   background-color: #133d5f;
 }
 .bg-peugeot3 {
-  background-color: #162133 !important;
+  background-color: #152848 !important;
 }
 .redes {
   background-color: #3c3947;
@@ -86,11 +86,45 @@ a:hover {
   background-color: #007edb !important;
   border-bottom: 1px solid #0062c5;
 }
+.btn-test {
+  background-color: #007be0 !important;
+  color: #fff !important;
+}
+
+.btn-test:hover {
+  background-color: #0d5dd0 !important;
+  color: #fff !important;
+}
 .btn-ficha:hover {
   color: #fff;
-  background-color: #0062C5 !important;
+  background-color: #0062c5 !important;
 }
 
 #home {
-  background-color: #f7f7f7;
+  background-color: rgb(76, 145, 170);
+  color: #fff;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.rounded-80 {
+  border-radius: 15px 15px 15px 15px !important;
+}
+
+.sociales {
+  font-size: 1.7rem;
+  padding: 0.1rem 0.55rem;
+}
+
+.fa-facebook-square {
+  color: #365899;
+}
+.fa-whatsapp-square {
+  color: #2bcc48;
+}
+
+.fa-instagram {
+  color: #c1307f;
 }
