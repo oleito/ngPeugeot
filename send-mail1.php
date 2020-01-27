@@ -2,7 +2,6 @@
 	$name = $_POST['nombre'];
 	$tel = $_POST['tel'];
 	$message = $_POST['message'];
-	$sector = $_POST['sector'];
 
 	$para = 'sistemas@parisautos.com.ar';
 
@@ -12,7 +11,6 @@
 	$mensaje = 'Mensaje enviado desde sitio WEB:';
 	$mensaje .= '<br> Nombre: ' . $name . "\r\n";
 	$mensaje .= '<br> Telefono: ' . $tel . "\r\n";
-	$mensaje .= '<br> Sector: ' . $sector . "\r\n";
 	$mensaje .= '<br> Mensaje: ' . $message . "\r\n";
 	$mensaje .= '</body>';
 	$mensaje .= '</html>';
