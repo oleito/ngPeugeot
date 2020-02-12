@@ -1,0 +1,130 @@
+@font-face {
+  font-family: Peugeot;
+  src: url("assets/fonts/peugeot-normal.otf") format("opentype");
+}
+@font-face {
+  font-family: "Peugeot-Regular";
+  src: url("assets/fonts/Peugeot.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.peugeot,
+body {
+  font-family: Peugeot, Helvetica, sans-serif !important;
+  position: relative !important;
+  overflow-y: scroll !important;
+}
+
+.telef-wp {
+  color: white;
+}
+.txt-mas {
+  font-size: 1.2rem;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+a:hover {
+  color: #fff !important;
+}
+
+.bg-peugeot1 {
+  background-color: #007edb;
+}
+.bg-peugeot2 {
+  background-color: #133d5f;
+}
+.bg-peugeot3 {
+  background-color: #152848 !important;
+}
+.redes {
+  background-color: #3c3947;
+}
+
+.btn-peugeot {
+  color: #fff;
+  background-color: #133d5f;
+  border-color: #133d5f;
+}
+
+.btn-peugeot:hover {
+  background: #0c2d47 !important;
+}
+
+.marca-card:hover,
+.marca-card {
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.marca-card:hover {
+  background-color: rgb(201, 201, 201);
+}
+
+.ficha-pdf,
+.ficha-pdf:hover {
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.ficha-pdf {
+  font-size: 1.3em;
+  color: #6d6d6d;
+}
+.ficha-pdf:hover {
+  color: black;
+}
+.btn-ficha {
+  color: #fff;
+  background-color: #007edb !important;
+  border-bottom: 1px solid #0062c5;
+}
+.btn-test {
+  background-color: #007be0 !important;
+  color: #fff !important;
+}
+
+.btn-test:hover {
+  background-color: #0d5dd0 !important;
+  color: #fff !important;
+}
+.btn-ficha:hover {
+  color: #fff;
+  background-color: #0062c5 !important;
+}
+
+#home {
+  background-color: rgb(76, 145, 170);
+  color: #fff;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.rounded-80 {
+  border-radius: 15px 15px 15px 15px !important;
+}
+
+.sociales {
+  font-size: 1.7rem;
+  padding: 0.1rem 0.55rem;
+}
+
+.fa-facebook-square {
+  color: #365899;
+}
+.fa-whatsapp-square {
+  color: #2bcc48;
+}
+
+.fa-instagram {
+  color: #c1307f;
+}
