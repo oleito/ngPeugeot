@@ -3,12 +3,12 @@
 	$tel = $_POST['tel'];
 	$message = $_POST['message'];
 
-	$para = 'sistemas@parisautos.com.ar';
+	$para = 'mauro.soratto@parisautos.com.ar';
 
 	$titulo = 'Mensaje desde la web - ParisPeugeot.com.ar';
 	$mensaje = '<html>';
 	$mensaje = '<body>';
-	$mensaje = 'Mensaje desde formulario WEB:';
+	$mensaje = 'Mensaje desde formulario WEB: parispeugeot.com.ar';
 	$mensaje .= '<br> Nombre: ' . $name . "\r\n";
 	$mensaje .= '<br> Telefono: ' . $tel . "\r\n";
 	$mensaje .= '<br> Mensaje: ' . $message . "\r\n";
@@ -16,7 +16,7 @@
 	$mensaje .= '</html>';
 
 $cabeceras = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-'From: sistemas@parisautos.com.ar' . "\r\n" .
+'From: mauro.soratto@parisautos.com.ar' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
 
 mail($para, $titulo, $mensaje, $cabeceras);
