@@ -1,25 +1,31 @@
 <?php
-	$name = $_POST['nombre'];
-	$tel = $_POST['tel'];
-	$message = $_POST['message'];
+$name = $_POST['nombre'];
+$apellido = $_POST['apellido'];
+$tel = $_POST['tel'];
+$email = $_POST['email'];
+$message = $_POST['message'];
 
-	$para = 'mauro.soratto@parisautos.com.ar';
-
-	$titulo = 'Mensaje desde la web - ParisPeugeot.com.ar';
-	$mensaje = '<html>';
-	$mensaje = '<body>';
-	$mensaje = 'Mensaje desde formulario WEB: parispeugeot.com.ar';
-	$mensaje .= '<br> Nombre: ' . $name . "\r\n";
-	$mensaje .= '<br> Telefono: ' . $tel . "\r\n";
-	$mensaje .= '<br> Mensaje: ' . $message . "\r\n";
-	$mensaje .= '</body>';
-	$mensaje .= '</html>';
+$titulo = 'Mensaje desde la web - ParisPeugeot.com.ar';
+$mensaje = '<html>';
+$mensaje = '<body>';
+$mensaje = 'Mensaje desde formulario WEB: parispeugeot.com.ar';
+$mensaje .= '<br> Nombre: ' . $name . "\r\n";
+$mensaje .= '<br> Apellido: ' . $apellido . "\r\n";
+$mensaje .= '<br> Telefono: ' . $tel . "\r\n";
+$mensaje .= '<br> Correo: ' . $email . "\r\n";
+$mensaje .= '<br> Mensaje: ' . $message . "\r\n";
+$mensaje .= '</body>';
+$mensaje .= '</html>';
 
 $cabeceras = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 'From: mauro.soratto@parisautos.com.ar' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
 
-mail($para, $titulo, $mensaje, $cabeceras);
+$para1 = 'mauro.soratto@parisautos.com.ar';
+$para2 = 'recepcion@parisautos.com.ar';
+
+mail($para1, $titulo, $mensaje, $cabeceras);
+mail($para2, $titulo, $mensaje, $cabeceras);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
