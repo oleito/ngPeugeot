@@ -63,10 +63,9 @@
 	<link rel="stylesheet" href="css/maps.css" />
 	<link rel="stylesheet" href="css/custom.css" />
 	<link rel="icon" href="favicon.ico">
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 	<title>Paris Autos SA</title>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body data-spy="scroll" data-target="#sticky-menu" data-offset="0">
@@ -208,9 +207,9 @@
 							<div class="card-body py-1">
 								<div class="row">
 									<div class="col align-self-start">
-										<h3 class="d-flex align-items-center px-1 pt-2">
+										<h5 class="d-flex align-items-center px-1 pt-2">
 											<strong> {{ modelo.nombre }} </strong>
-										</h3>
+										</h5>
 									</div>
 									<a v-if="modelo.manual" target="_blank" class="d-flex align-items-center" :href="'assets/manuales/' + modelo.manual">
 										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
@@ -266,18 +265,18 @@
 								<div class="p-1 border m-2">
 									<img :src="'./assets/vendedores/' + vendedor.img" class=" img-fluid" alt="	">
 								</div>
-								<div class="card-body pt-0 pb-2">
-									<h4 class="m-0"> {{ vendedor.nombre }} </h4>
+								<div class="card-body pt-0 pb-2 px-2">
+									<h5 class="m-0"> {{ vendedor.nombre }} </h5>
 									<p class="card-text m-0 mb-1"> {{ vendedor.sector }} </p>
 									<p class="mb-1"><i class="fas fa-phone"></i>  {{ vendedor.cel }} </p>
 									<p class="mb-1"><small>  {{ vendedor.email }} </small></p>
 									<div class="d-flex text-right">
 										<small class="text-muted">
 											<div class="vendedores-contacto">
-												<a class="mx-1" href="mailto:cristina.parrilla@parisautos.com.ar?Subject=Solicito%20que%20me%20contacten." target="_top">
+												<a class="mx-1" :href="'mailto:' + vendedor.email + '?Subject=Solicito%20que%20me%20contacten.'" target="_top">
 													<i class="far fa-envelope"></i>
 												</a>
-												<a class="mx-1" href="https://api.whatsapp.com/send?phone=542664001930&amp;&amp;text=Hola,%20quisiera%20solicitar%20un%20turno."
+												<a class="mx-1" :href="'https://api.whatsapp.com/send?phone=54' + vendedor.cel + '&amp;&amp;text=Hola,%20quisiera%20solicitar%20un%20turno.'"
 													target="_blank">
 													<i class="fab fa-whatsapp"></i>
 												</a>
