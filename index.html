@@ -69,24 +69,17 @@
 </head>
 
 <body data-spy="scroll" data-target="#sticky-menu" data-offset="0">
-	<!-- Load Facebook SDK for JavaScript
-	<div id="fb-root"></div>
-	<script>
-		(function (d, s, id) {
-			var js,
-				fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1";
-			fjs.parentNode.insertBefore(js, fjs);
-		})(document, "script", "facebook-jssdk");
+	<!-- Código de instalación Cliengo para www.parispeugeot.com.ar -->
+	<script type="text/javascript">
+		(function () {
+			var ldk = document.createElement('script');
+			ldk.type = 'text/javascript';
+			ldk.async = true;
+			ldk.src = 'https://s.cliengo.com/weboptimizer/5e7bb9d9e4b0cad9a131f5e7/5e7bcecbe4b0cad9a131fd45.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ldk, s);
+		})();
 	</script>
-
-	<div class="fb-customerchat" attribution="install_email" page_id="739375842842061"></div>
- -->
-	<!--./Load Facebook SDK for JavaScript -->
-
 
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
@@ -119,9 +112,6 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#contacto">Contacto</a>
 				</li>
-				<!-- <li class="nav-item">
-					<a class="btn btn-test border-0 rounded-0" href="#">Test Drive</a>
-				</li> -->
 			</ul>
 		</div>
 	</nav>
@@ -211,212 +201,26 @@
 				<!-- row -->
 				<div class="row my-4  justify-content-around" id="appModelos">
 
-					
 					<div class="col-md-4 col-sm-12 my-2" v-for="modelo in modelos">
 						<div class="card">
-							<img class="card-img-top" src="assets/modelos/208.jpg" alt="mdelo de auto" />
+							<img class="card-img-top" :src="'assets/modelos/' + modelo.img" alt="mdelo de auto" />
 							<div class="card-body py-1">
 								<div class="row">
 									<div class="col align-self-start">
-										<h6 class="d-flex align-items-center px-1 pt-2">
-											<strong>208</strong>
-										</h6>
+										<h3 class="d-flex align-items-center px-1 pt-2">
+											<strong> {{ modelo.nombre }} </strong>
+										</h3>
 									</div>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/208.pdf">
+									<a v-if="modelo.manual" target="_blank" class="d-flex align-items-center" :href="'assets/manuales/' + modelo.manual">
 										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
 									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_208.pdf">
+									<a target="_blank" class="d-flex align-items-center" :href="'assets/fichas/' + modelo.ficha">
 										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
 									</a>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<!-- 
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/208.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<div class="row">
-									<div class="col align-self-start">
-										<h6 class="d-flex align-items-center px-1 pt-2">
-											<strong>208</strong>
-										</h6>
-									</div>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/208.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_208.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/308.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<h6 class="d-flex justify-content-between align-items-center px-1 pt-2">
-									<strong>308</strong>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/308.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_308.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-									</a>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/408.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<h6 class="d-flex justify-content-between align-items-center px-1 pt-2">
-									<strong>408</strong>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/408.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_408.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-									</a>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/2008.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<h6 class="d-flex justify-content-between align-items-center px-1 pt-2">
-									<strong>2008</strong>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/2008.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_2008.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-									</a>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/3008.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<h6 class="d-flex justify-content-between align-items-center px-1 pt-2">
-									<strong>3008</strong>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/3008.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_3008.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-
-									</a>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/5008.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<h6 class="d-flex justify-content-between align-items-center px-1 pt-2">
-									<strong>5008</strong>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/5008.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_5008.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-									</a>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/boxer.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<h6 class="d-flex justify-content-between align-items-center px-1 pt-2">
-									<strong>Boxer</strong>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/boxer.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_BOXER.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-									</a>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/expert.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<h6 class="d-flex justify-content-between align-items-center px-1 pt-2">
-									<strong>Expert</strong>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/expert.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_EXPERT.PDF">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-									</a>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/traveller.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<h6 class="d-flex justify-content-between align-items-center px-1 pt-2">
-									<strong>Traveller</strong>
-									<a target="_blank" class="d-flex align-items-center" href="">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0" disabled>Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_TRAVELLER.PDF">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-									</a>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/partner_f.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<h6 class="d-flex justify-content-between align-items-center px-1 pt-2">
-									<strong>Partner Furgon</strong>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/partner_f.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_PARTNER_F.PDF">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-									</a>
-								</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-12 my-2">
-						<div class="card">
-							<img class="card-img-top" src="assets/modelos/partner_p.jpg" alt="mdelo de auto" />
-							<div class="card-body py-1">
-								<h6 class="d-flex justify-content-between align-items-center px-1 pt-2">
-									<strong>Partner Patagonica</strong>
-									<a target="_blank" class="d-flex align-items-center" href="assets/manuales/partner_p.pdf">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
-									</a>
-									<a target="_blank" class="d-flex align-items-center" href="assets/fichas/FICHA TECNICA_PARTNER_P.PDF">
-										<button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
-									</a>
-								</h6>
-							</div>
-						</div>
-					</div> -->
-
-
 
 				</div>
 				<!-- ./row -->
