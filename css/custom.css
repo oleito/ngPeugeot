@@ -128,3 +128,14 @@ a:hover {
 .fa-instagram {
   color: #c1307f;
 }
+
+.vendedores-contacto a {
+  font-size: 2em;
+  color: #3C3947;
+}
+.vendedores-contacto a i:hover {
+  color: #006cbc;
+}
+.vendedores-contacto a  :hover {
+  color: #006cbc;
+}
