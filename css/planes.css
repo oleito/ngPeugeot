@@ -1,3 +1,16 @@
+body {
+  position: relative !important;
+  overflow-y: scroll !important;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+a:hover {
+  color: #fff !important;
+}
+
 .slide-wrapper {
   position: relative;
 }
