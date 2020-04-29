@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/maps.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="stylesheet" href="../css/planes.css" />
+    <link rel="icon" href="../favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Paris Autos SA</title>
+
+</head>
+
+<body data-spy="scroll" data-target="#sticky-menu" data-offset="0">
+    <div class="container">
+        <img class="img-fluid" src="../assets/logos/autoplan-planes.png" alt="">
+    </div>
+
+    <nav id="sticky-menu" class="navbar navbar-expand-md navbar-dark bg-peugeot-planes sticky-top shadow-sm">
+        <div class="container">
+            <span class="navbar-brand m-0 p-0 h1"><img class="img-fluid" src="../assets/logos/logo-paris-concesionario-2.png" alt=""></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#modelos">Modelos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vendedores">Ventas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="portada">
+        <div class="container slide-wrapper">
+            <div id="carouselPortada" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselPortada" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselPortada" data-slide-to="1"></li>
+                    <li data-target="#carouselPortada" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../assets/slider/planes_208.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/slider/planes_208_gt.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/slider/planes_208_gt_2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-slider-container">
+                <div class="form-slider-content">
+                    <div class="mx-auto">
+                        <form id="contact-form" class="contact form-slider p-3 bg-form " name="contact-form" method="post" action="send-mail-planes.php">
+                            <h3>Dejanos tus datos</h3>
+                            <p>Nosotros te llamamos</p>
+                            <div class="form-group">
+                                <input type="text" name="nombre" class="form-control form-control-sm" required="required" placeholder="Nombre y Apellido" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="tel" class="form-control form-control-sm" required="required" placeholder="Telefono" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control form-control-sm" required="required" placeholder="Email" autocomplete="off">
+                            </div>
+                            <div class="form-group m-0 p-0">
+                                <button type="submit" class="btn btn-planes btn-block text-white">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="medios-pago">
+        <div class="container text-center medios-pago py-3 mt-4">
+            <h2>Beneficios especiales</h2>
+            <p>Adhiriendose a estos medios de pago</p>
+            <img src="../assets/mediosdepago.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="modelos">
+        <!-- MODELOS-->
+        <div class="container pb-5">
+            <!-- row -->
+            <div class="row my-4  justify-content-around" id="appModelos">
+
+                <div class="col-md-4 col-sm-12 my-2" v-for="modelo in modelos">
+                    <div class="card">
+                        <img class="card-img-top" :src="'../assets/modelos/' + modelo.img" alt="mdelo de auto" />
+                        <div class="card-body py-1">
+                            <div class="row">
+                                <div class="col align-self-start">
+                                    <h5 class="d-flex align-items-center px-1 pt-2">
+                                        <strong> {{ modelo.nombre }} </strong>
+                                    </h5>
+                                </div>
+                                <a v-if="modelo.manual" target="_blank" class="d-flex align-items-center" :href="'../assets/manuales/' + modelo.manual">
+                                    <button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Manual</button>
+                                </a>
+                                <a target="_blank" class="d-flex align-items-center" :href="'../assets/fichas/' + modelo.ficha">
+                                    <button type="button" class="btn btn-sm btn-light btn-ficha rounded-0">Ficha tecnica</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ./row -->
+        </div>
+    </section>
+    <!-- /.MODELOS -->
+
+    <section id="vendedores">
+        <div class="container-fluid py-5">
+            <div class="container">
+                <div class="row justify-content-around" id="appVendedores">
+
+
+                    <div class="col-md-3" v-for="vendedor in vendedores">
+                        <div class="card mb-3 shadow-sm">
+                            <div class="p-1 border m-2">
+                                <img :src="'../assets/vendedores-planes/' + vendedor.img" class=" img-fluid" alt="	">
+                            </div>
+                            <div class="card-body bg-light pt-0 pb-2 px-2">
+                                <h5 class="m-0"> {{ vendedor.nombre }} </h5>
+                                <p class="card-text m-0 mb-1"> {{ vendedor.sector }} </p>
+                                <p class="mb-1"><i class="fas fa-phone"></i> {{ vendedor.cel }} </p>
+                                <p class="mb-1"><small> {{ vendedor.email }} </small></p>
+                                <div class="d-flex text-right">
+                                    <small class="text-muted">
+                                        <div class="vendedores-contacto">
+                                            <a class="mx-1" :href="'mailto:' + vendedor.email + '?Subject=Solicito%20que%20me%20contacten.'" target="_top">
+                                                <i class="far fa-envelope"></i>
+                                            </a>
+                                            <a class="mx-1"
+                                                :href="'https://api.whatsapp.com/send?phone=54' + vendedor.cel + '&amp;&amp;text=Hola,%20quisiera%20solicitar%20un%20turno.'"
+                                                target="_blank">
+                                                <i class="fab fa-whatsapp"></i>
+                                            </a>
+                                        </div>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <div class="row pb-4">
+                <div class="col-md-7">
+                    <div class="formulario-contacto p-4">
+                        <!-- <h6>CONTACTO</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto w-50" /> -->
+                        <form method="post" class="" action="send-mail-planes-2.php">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="nombre">Nombre / Apellido</label>
+                                        <input type="text" name="nombre" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre" autocomplete="off" />
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="tel">Celular</label>
+                                        <input type="text" class="form-control" id="tel" name="tel" placeholder="(Prefijo + numero)" autocomplete="off" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="nombre@dominio.com" autocomplete="off" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Su consulta</label>
+                                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Escriba su consulta aca."></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btm-xs">Enviar Consulta</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="map p-3">
+                        <div id="map"></div>
+                        <script src="../js/maps-planes.js"></script>
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ3qvd1x9E61XFUTZ1D6JNSkU_yv0ctm8&callback=initMap"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-md-4">
+                    <h6>PARIS AUTOS</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto w-50" />
+                    <p>Unico concesionario oficial Peugeot en la provincia de San Luis</p>
+                    <p><a href="#" class="text-decoration-none text-white-50"> > Trabaja con nosotros</a></p>
+                    <p><a href="https://webmail.parisautos.com.ar/" class="text-decoration-none text-white-50"> > Acceso WebMail</a></p>
+                </div>
+                <div class="col-md-2 d-none d-md-block">
+                    <h6>GRUPO PARIS</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto w-50" />
+                    <p><a target="_blank" href="https://peugeot.parisautos.com.ar/" class="text-decoration-none text-white-50"> > Peugeot</a></p>
+                    <p><a target="_blank" href="https://citroen.parisautos.com.ar/" class="text-decoration-none text-white-50"> > Citroën</a></p>
+                    <p><a target="_blank" href="https://usados.parisautos.com.ar/" class="text-decoration-none text-white-50"> > Usados</a></p>
+                    <p><a target="_blank" href="https://postventa.parisautos.com.ar/" class="text-decoration-none text-white-50"> > Postventa</a></p>
+                    <p><a target="_blank" href="https://parismotos.com.ar/" class="text-decoration-none text-white-50"> > Motos</a></p>
+                </div>
+                <div class="col-md-2 d-none d-md-block">
+                    <h6>SECCIONES</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto w-50" />
+                    <p><a href="#" class="text-decoration-none text-white-50"> > Peugeot</a></p>
+                    <p><a href="#" class="text-decoration-none text-white-50"> > Citroën</a></p>
+                    <p><a href="#" class="text-decoration-none text-white-50"> > Usados</a></p>
+                    <p><a href="#" class="text-decoration-none text-white-50"> > Postventa</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h6>CONTACTO</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto w-50" />
+                    <h4><small>En</small> San Luis</h4>
+                    <address>
+                        Av. Santos Ortiz 1228<br />
+                        San Luis - Argentina<br />
+                        Tel. 266 4 438343<br />
+                        <a class="telef-wp" href="https://api.whatsapp.com/send?phone=5492664303957&text=Hola!%20Tengo%20una%20consulta!">
+                            Cel. 266 4 303957 <i class="fab fa-whatsapp txt-mas"></i></a><br />
+                    </address>
+                    <hr class="mb-1 mt-3 d-inline-block mx-auto w-25" />
+                    <h4><small>En</small> Villa Mercedes</h4>
+                    <address>
+                        Av. Mitre 888<br />
+                        San Luis - Argentina<br />
+                        Tel. 2657 427700<br />
+                        <a class="telef-wp" href="https://api.whatsapp.com/send?phone=5492664002069&text=Hola!%20Tengo%20una%20consulta!">
+                            Cel. 266 4002069 <i class="fab fa-whatsapp txt-mas"></i></a><br />
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">
+            © 2020 Copyright: PARIS AUTOS S.A.
+        </div>
+    </footer>
+
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="../js/vendedores-planes.js"></script>
+    <script src="../js/modelos-planes.js"></script>
+
+    <script src="../js/cliengo-planes.js"></script>
+
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () { });
+    </script>
+    <!-- -->
+</body>
+
+</html>
