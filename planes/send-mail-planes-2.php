@@ -25,7 +25,7 @@ $cabeceras = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 $para1 = 'diego.moreno@parisautos.com.ar';
 $para2 = 'sitemas@parisautos.com.ar';
 
-// mail($para1, $titulo, $mensaje, $cabeceras);
+mail($para1, $titulo, $mensaje, $cabeceras);
 mail($para2, $titulo, $mensaje, $cabeceras);
 ?>
 

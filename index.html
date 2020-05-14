@@ -87,11 +87,9 @@
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-
 	<div class="container-fluid m-0 p-0 d-none d-md-block">
 		<img class="img-fluid" src="assets/banner.jpg" />
 	</div>
-
 	<nav id="sticky-menu" class="navbar navbar-expand-md navbar-dark bg-peugeot3 sticky-top shadow-sm">
 		<span class="navbar-brand mb-0 h1 text-white">PARIS Peugeot</span>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
@@ -125,16 +123,17 @@
 				</div>
 				<div class="row">
 					<div class="col-md-8 m-0 p-0">
-
 						<div id="carousel1" class="carousel  slide rounded rounded-80" data-ride="carousel">
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img class="d-block img-fluid m-0" src="assets/slider/abril-1.jpg" alt="First slide" />
+									<img class="d-block img-fluid m-0" src="assets/slider/mayo1.jpg" alt="First slide" />
 								</div>
 								<div class="carousel-item">
-									<img class="d-block img-fluid m-0" src="assets/slider/abril-2.jpg" alt="Second slide" />
+									<img class="d-block img-fluid m-0" src="assets/slider/mayo2.jpg" alt="Second slide" />
 								</div>
-
+								<div class="carousel-item">
+									<img class="d-block img-fluid m-0" src="assets/slider/mayo3.jpg" alt="Second slide" />
+								</div>
 							</div>
 							<a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -183,7 +182,6 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -200,7 +198,6 @@
 				</div>
 				<!-- row -->
 				<div class="row my-4  justify-content-around" id="appModelos">
-
 					<div class="col-md-4 col-sm-12 my-2" v-for="modelo in modelos">
 						<div class="card">
 							<img class="card-img-top" :src="'assets/modelos/' + modelo.img" alt="mdelo de auto" />
@@ -221,7 +218,6 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
 				<!-- ./row -->
 			</div>
@@ -238,11 +234,11 @@
 							<h3>Venta Tradicional</h3>
 							<h4>266 4 303957</h4>
 						</div>
-						<div class="col-md-3 d-block marca-card pt-5 pb-4">
+						<a href="./planes/" class="col-md-3 d-block marca-card pt-5 pb-4">
 							<img class="border border-secondary rounded" src="assets/logos/autoplan.jpg" />
 							<h3>Plan de Ahorro</h3>
 							<h4>266 450 3609</h4>
-						</div>
+						</a>
 						<div class="col-md-3 d-block marca-card pt-5 pb-4">
 							<img class="border border-secondary rounded" src="assets/logos/empresas.jpg" />
 							<h3>Venta a Empresas</h3>
@@ -258,8 +254,6 @@
 			<div class="container-fluid py-5">
 				<div class="container">
 					<div class="row justify-content-around" id="appVendedores">
-
-
 						<div class="col-md-3" v-for="vendedor in vendedores">
 							<div class="card mb-3 shadow-sm">
 								<div class="p-1 border m-2">
@@ -287,10 +281,6 @@
 								</div>
 							</div>
 						</div>
-
-
-
-
 					</div>
 				</div>
 			</div>
