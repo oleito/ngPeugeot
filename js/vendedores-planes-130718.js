@@ -17,11 +17,11 @@ var appVendedores = new Vue({
         email: "alejandro.david@parisautos.com.ar",
       },
       {
-        img: "Fsutil.jpg",
-        nombre: "Felipe Sutil",
+        img: "Mgonzalez.jpg",
+        nombre: "Mario Gonzalez",
         sector: "Ejecutivo de ventas",
-        cel: "2664260519",
-        email: "felipe.sutil@parisautos.com.ar",
+        cel: "2664950238",
+        email: "mario.gonzalez@parisautos.com.ar",
       },
       {
         img: "Jortiz.jpg",
