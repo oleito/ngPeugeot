@@ -24,13 +24,6 @@ var appVendedores = new Vue({
         email: "carolina.gonzalez@parisautos.com.ar"
       },
       {
-        img: "Slucero.jpg",
-        nombre: "Soledad Lucero",
-        sector: "Ejecutivo de ventas",
-        cel: "2664883826",
-        email: "soledad.lucero@parisautos.com.ar"
-      },
-      {
         img: "Mmartin.jpg",
         nombre: "Mauricio Martin",
         sector: "Ejecutivo de ventas",
