@@ -1,1 +1,30 @@
-<p>home works!</p>
+<div class="container-fluid">
+    <h1>Carrousel</h1>
+    <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide *ngFor="let image of images; index as i">
+            <div class="picsum-img-wrapper">
+                <img class="mx-auto d-block" [src]="images[i]" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <h1>Oferta</h1>
+        </div>
+        <div class="col-md-3">
+            <h1>Oferta</h1>
+        </div>
+        <div class="col-md-3">
+            <h1>Oferta</h1>
+        </div>
+        <div class="col-md-3">
+            <h1>Oferta</h1>
+        </div>
+    </div>
+</div>
