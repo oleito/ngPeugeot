@@ -1,5 +1,4 @@
 <div class="container-fluid">
-    <h1>Carrousel</h1>
     <ngb-carousel *ngIf="images">
         <ng-template ngbSlide *ngFor="let image of images; index as i">
             <div class="picsum-img-wrapper">
@@ -12,19 +11,27 @@
         </ng-template>
     </ngb-carousel>
 </div>
+
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <img src="https://picsum.photos/id/324/400/180" alt="">
+            <h2>Tradicional</h2>
+        </div>
+        <div class="col-md-4">
+            <img src="https://picsum.photos/id/326/400/180" alt="">
+            <h2>Planes de ahorro</h2>
+        </div>
+        <div class="col-md-4">
+            <img src="https://picsum.photos/id/327/400/180" alt="">
+            <h2>Empresas</h2>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-3">
-            <h1>Oferta</h1>
-        </div>
-        <div class="col-md-3">
-            <h1>Oferta</h1>
-        </div>
-        <div class="col-md-3">
-            <h1>Oferta</h1>
-        </div>
-        <div class="col-md-3">
-            <h1>Oferta</h1>
-        </div>
+        <div class="col-md-6">Formulario</div>
+        <div class="col-md-6">Mapa</div>
     </div>
 </div>
