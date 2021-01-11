@@ -4,10 +4,10 @@ var app = new Vue({
     message: "Hello Vue!",
     modelos: [
       {
-        img: "208.jpg",
-        nombre: "208",
+        img: "208_new.jpg",
+        nombre: "Nuevo 208",
         manual: "208.pdf",
-        ficha: "FICHA TECNICA_208.pdf"
+        ficha: "FICHA TECNICA_208_new.pdf"
       },
       {
         img: "308.jpg",
